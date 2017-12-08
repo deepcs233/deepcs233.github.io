@@ -198,7 +198,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -208,7 +208,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -231,7 +231,7 @@
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
-            Search
+            Suche
           </a>
         </li>
       
@@ -285,7 +285,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/13/Api/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/08/2017机器学习面经总结/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Shao Hao">
@@ -307,8 +307,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/13/Api/" itemprop="url">
-                  Api
+                <a class="post-title-link" href="/2017/12/08/2017机器学习面经总结/" itemprop="url">
+                  Unbenannt
                 </a>
               
             
@@ -322,10 +322,10 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-13T17:50:18+08:00">
-                2017-04-13
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-08T16:25:39+08:00">
+                2017-12-08
               </time>
             
 
@@ -343,9 +343,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/04/13/Api/#comments" itemprop="discussionUrl">
+                <a href="/2017/12/08/2017机器学习面经总结/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/04/13/Api/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2017/12/08/2017机器学习面经总结/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -353,7 +353,7 @@
 
           
           
-             <span id="/2017/04/13/Api/" class="leancloud_visitors" data-flag-title="Api">
+             <span id="/2017/12/08/2017机器学习面经总结/" class="leancloud_visitors" data-flag-title="">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -384,314 +384,80 @@
       
         
           
-            <h1 id="Project-hot2"><a href="#Project-hot2" class="headerlink" title="Project-hot2"></a>Project-hot2</h1><p>热气球</p>
-<h2 id="naive-scrapy-master"><a href="#naive-scrapy-master" class="headerlink" title="naive-scrapy-master"></a>naive-scrapy-master</h2><h3 id="使用方法：在文件夹下运行scrapy-crawl-all"><a href="#使用方法：在文件夹下运行scrapy-crawl-all" class="headerlink" title="使用方法：在文件夹下运行scrapy crawl all"></a>使用方法：在文件夹下运行scrapy crawl all</h3><h2 id="DataProcess-文件夹的文件完成对数据的预处理"><a href="#DataProcess-文件夹的文件完成对数据的预处理" class="headerlink" title="DataProcess 文件夹的文件完成对数据的预处理"></a>DataProcess 文件夹的文件完成对数据的预处理</h2><ul>
-<li>clac_news_hot.py 计算新闻热度</li>
-<li>clac_word_freq.py  计算词语热度</li>
-<li>classify_news.py  分类新闻</li>
-<li>clean_str.py  字符串清理包，被其他程序引用</li>
-<li>hot_muti_count.py  将新闻的热度与count计算，count越高热度越高，count为0的新闻热度也为0，将不再被显示</li>
-<li>rm_samenews.py  将重复的新闻count置0，将其count转移至其中的一条新闻上</li>
-<li>basic 基类，被其他类所继承</li>
+            <p>###写了一波面经，回馈一波社会= =，以下没有按时间顺序排序</p>
+<p>####（17暑假）今日头条二面：</p>
+<ol>
+<li>scikit-learn 中LR 常用分类核</li>
+<li>项目</li>
+<li>LR 的损失函数</li>
+<li>一个增序数组，将后面K个数（K不告诉你）整体移至数组前面，现在给你一个数用logn的复杂度判断这个数是否在数组中</li>
+<li>什么情况下会过拟合，怎样解决过拟合</li>
+<li>SVM中核的作用，有哪些核，SVM相对于LR的优缺点</li>
+</ol>
+<p>####百度NLP一面（各种问算法）：</p>
+<ol>
+<li>m个平均长度为n的逆序数组，求出出现次数最多的TopK个数</li>
+<li>中缀转后缀实现四则+括号的计算器</li>
+<li>实现类似tensorflow的运算图的库有哪些较好的数据结构，如何设计</li>
+<li>rnn公式，lstm原理</li>
+<li>vim中你常见的快捷键有哪些。。。（wetyuiopadghjklcb)</li>
+</ol>
+<p>####百度NLP二面（各种问算法）：</p>
+<ol>
+<li>实习项目</li>
+<li>Z型层次遍历树</li>
+<li>不用额外空间的字符串逆序</li>
+<li>检查是否可以使用字典里的词语匹配字符串（最优解为DP）</li>
+<li>开放题：如果让你给一篇文章打tags，有哪些方面（比如文章的分类，关键词等）可以考虑</li>
+</ol>
+<p>####搜狐大数据中心一面：</p>
+<ol>
+<li>详问实习项目，每个epoch的训练时间？</li>
+<li>项目：聚类方法（single-pass），相似度计算方法，怎样优化O(n2)的相似度计算</li>
+<li>协同过滤的基本原理</li>
+<li>对图片型数据的常见预处理操作有哪些</li>
+<li>bathnormsize和dropout层如何实现的，有什么作用，为什么能有作用</li>
+<li>keras中卷积层和池化层有哪些常见的模式（比如same等）</li>
+<li>面试官好像分不清你电和西电2333</li>
+</ol>
+<h5 id="二面问我是否考虑其他大数据研发部门？？直接拒了"><a href="#二面问我是否考虑其他大数据研发部门？？直接拒了" class="headerlink" title="二面问我是否考虑其他大数据研发部门？？直接拒了"></a>二面问我是否考虑其他大数据研发部门？？直接拒了</h5><p>####网易有道一面（小姐姐，问的都很基础）：</p>
+<ol>
+<li>实习项目</li>
+<li>常见的bash命令，git命令</li>
+<li>常用的分类、聚类算法有哪些</li>
+<li>怎样避免梯度爆炸和梯度弥散，为什么会发生</li>
+<li>特征工程是什么，如何去做特征工程</li>
+<li>机器学习相关常用的开源库有哪些</li>
+<li>CNN常用的卷积核大小，stride是什么</li>
+<li>数据增强有哪些常见操作</li>
+</ol>
+<p>####网易有道二面（还是小姐姐，纸上写代码然后拍照= =）：</p>
+<ol>
+<li>实习项目</li>
+<li>RF相对于决策树有哪些改动</li>
+<li>什么情况下会过拟合，怎样解决过拟合</li>
+<li>boosting和bagging各自做简单介绍，有何区别</li>
+<li>判断在一棵二叉树中是否有相同的子结构，如果有找出有多少对相同的子结构（比如一棵二叉树的左右结点是两颗相同的子树就算一对）</li>
+</ol>
+<p>####京东一面（时间很短）：</p>
+<ol>
+<li>项目</li>
+<li>比赛获奖项目是什么，比赛的级别是什么</li>
+<li>什么情况下会过拟合，怎样解决过拟合</li>
+<li>实习项目</li>
+<li>链表是否存在环，若是求出环的入口点</li>
+</ol>
+<p>####京东二面（时间很短）：</p>
+<ol>
+<li>项目</li>
+<li>实习项目：为什么不采用模型融合</li>
+<li>著名的深度神经网络结构（如vgg16等）</li>
+<li>求一颗二叉树中TopK深度的结点</li>
+</ol>
+<p>####头条推荐算法：</p>
+<ul>
+<li>组长直接帮我推过去了= =，所以最后还是回头条去了=。=</li>
 </ul>
-<h2 id="PrepareJson-提供基本的json文件"><a href="#PrepareJson-提供基本的json文件" class="headerlink" title="PrepareJson 提供基本的json文件"></a>PrepareJson 提供基本的json文件</h2><ul>
-<li>gen_basic_json.py 提供基本的json</li>
-<li>relatedGraph.py  关系图的数据json</li>
-<li>read_graph/topics/words.py  用于美观展示生成的json文件</li>
-</ul>
-<h3 id="contrast-web-py-对比网页，返回改动内容"><a href="#contrast-web-py-对比网页，返回改动内容" class="headerlink" title="contrast_web.py 对比网页，返回改动内容"></a>contrast_web.py 对比网页，返回改动内容</h3><h3 id="processdata-py-集成DataProcess-的文件，运行后可以一次生成所有基本数据"><a href="#processdata-py-集成DataProcess-的文件，运行后可以一次生成所有基本数据" class="headerlink" title="processdata.py 集成DataProcess 的文件，运行后可以一次生成所有基本数据"></a>processdata.py 集成DataProcess 的文件，运行后可以一次生成所有基本数据</h3><h3 id="settings-py-存放配置及常数"><a href="#settings-py-存放配置及常数" class="headerlink" title="settings.py 存放配置及常数"></a>settings.py 存放配置及常数</h3><h3 id="utils-py-存放常用函数"><a href="#utils-py-存放常用函数" class="headerlink" title="utils.py 存放常用函数"></a>utils.py 存放常用函数</h3><h3 id="stopwords-dat-停用词表"><a href="#stopwords-dat-停用词表" class="headerlink" title="stopwords.dat 停用词表"></a>stopwords.dat 停用词表</h3>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/13/hello/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shao Hao">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Deepcs">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/13/hello/" itemprop="url">
-                  hello
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-13T10:35:26+08:00">
-                2017-04-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/04/13/hello/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/04/13/hello/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/04/13/hello/" class="leancloud_visitors" data-flag-title="hello">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/13/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Shao Hao">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Deepcs">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/13/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-13T10:00:16+08:00">
-                2017-04-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/04/13/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/04/13/hello-world/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/04/13/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">Visitors </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 
           
         
@@ -771,8 +537,8 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">posts</span>
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
           
@@ -833,7 +599,7 @@
 
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
