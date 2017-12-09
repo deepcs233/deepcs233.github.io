@@ -102,7 +102,7 @@
 <meta property="og:description" content="《Fluent Python》读书笔记 —— 第一章    数据结构1. 序列构成的数组可变序列与不可变序列可变序列  list, bytearray, array.array, collections.deque, memoryview  不可变序列  tuple, str, bytes  笛卡尔积 — 列表推导式的嵌套12345&amp;gt;&amp;gt;&amp;gt; colors = [&apos;blacklack">
 <meta property="og:image" content="https://dn-mhke0kuv.qbox.me/524dbece9003248d928c.png">
 <meta property="og:image" content="http://7i7hhc.com1.z0.glb.clouddn.com/encode-decode.jpg">
-<meta property="og:updated_time" content="2017-12-09T18:05:30.000Z">
+<meta property="og:updated_time" content="2017-12-09T18:06:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《Fluent Python》读书笔记 —— 第一章    数据结构">
 <meta name="twitter:description" content="《Fluent Python》读书笔记 —— 第一章    数据结构1. 序列构成的数组可变序列与不可变序列可变序列  list, bytearray, array.array, collections.deque, memoryview  不可变序列  tuple, str, bytes  笛卡尔积 — 列表推导式的嵌套12345&amp;gt;&amp;gt;&amp;gt; colors = [&apos;blacklack">
@@ -471,9 +471,9 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> sys </div><div class="line">reload(sys) </div><div class="line">sys.setdefaultencoding(<span class="string">'gbk'</span>)</div></pre></td></tr></table></figure>
 </li>
 <li><p>忽略异常值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">s.decode(<span class="string">'gbk'</span>,<span class="string">'ignore'</span>).encode(<span class="string">'utf-8′)</span></div></pre></td></tr></table></figure>
 </li>
 </ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">s.decode(<span class="string">'gbk'</span>,<span class="string">'ignore'</span>).encode(<span class="string">'utf-8′)</span></div></pre></td></tr></table></figure>
 <hr>
 <p>以下摘抄自 [!<a href="https://www.v2ex.com/t/339142" target="_blank" rel="external">https://www.v2ex.com/t/339142</a>] author: lzjun</p>
 <h3 id="Python2-字符类型"><a href="#Python2-字符类型" class="headerlink" title="Python2 字符类型"></a>Python2 字符类型</h3><p>在 python2 中和字符串相关的数据类型有 str 和 unicode 两种类型，它们继承自 basestring ，而 str 类型的字符串的编码格式可以是 ascii 、 utf-8 、 gbk 等任何一种类型。</p>

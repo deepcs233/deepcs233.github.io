@@ -468,9 +468,9 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> sys </div><div class="line">reload(sys) </div><div class="line">sys.setdefaultencoding(<span class="string">'gbk'</span>)</div></pre></td></tr></table></figure>
 </li>
 <li><p>忽略异常值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">s.decode(<span class="string">'gbk'</span>,<span class="string">'ignore'</span>).encode(<span class="string">'utf-8′)</span></div></pre></td></tr></table></figure>
 </li>
 </ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">s.decode(<span class="string">'gbk'</span>,<span class="string">'ignore'</span>).encode(<span class="string">'utf-8′)</span></div></pre></td></tr></table></figure>
 <hr>
 <p>以下摘抄自 [!<a href="https://www.v2ex.com/t/339142" target="_blank" rel="external">https://www.v2ex.com/t/339142</a>] author: lzjun</p>
 <h3 id="Python2-字符类型"><a href="#Python2-字符类型" class="headerlink" title="Python2 字符类型"></a>Python2 字符类型</h3><p>在 python2 中和字符串相关的数据类型有 str 和 unicode 两种类型，它们继承自 basestring ，而 str 类型的字符串的编码格式可以是 ascii 、 utf-8 、 gbk 等任何一种类型。</p>
