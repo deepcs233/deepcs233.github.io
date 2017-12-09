@@ -78,6 +78,8 @@
 
 
 
+  
+
 
   <link rel="alternate" href="/atom.xml" title="Deepcs" type="application/atom+xml" />
 
@@ -100,7 +102,7 @@
 <meta property="og:description" content="《Fluent Python》读书笔记 —— 第一章    数据结构1. 序列构成的数组可变序列与不可变序列可变序列  list, bytearray, array.array, collections.deque, memoryview  不可变序列  tuple, str, bytes  笛卡尔积 — 列表推导式的嵌套12345&amp;gt;&amp;gt;&amp;gt; colors = [&apos;blacklack">
 <meta property="og:image" content="https://dn-mhke0kuv.qbox.me/524dbece9003248d928c.png">
 <meta property="og:image" content="http://7i7hhc.com1.z0.glb.clouddn.com/encode-decode.jpg">
-<meta property="og:updated_time" content="2017-12-09T18:01:45.000Z">
+<meta property="og:updated_time" content="2017-12-09T18:05:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《Fluent Python》读书笔记 —— 第一章    数据结构">
 <meta name="twitter:description" content="《Fluent Python》读书笔记 —— 第一章    数据结构1. 序列构成的数组可变序列与不可变序列可变序列  list, bytearray, array.array, collections.deque, memoryview  不可变序列  tuple, str, bytes  笛卡尔积 — 列表推导式的嵌套12345&amp;gt;&amp;gt;&amp;gt; colors = [&apos;blacklack">
@@ -204,7 +206,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -214,7 +216,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -237,7 +239,7 @@
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
-            Search
+            Suche
           </a>
         </li>
       
@@ -325,7 +327,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-09T00:00:00+08:00">
                 2017-12-09
@@ -396,8 +398,7 @@
 <h3 id="笛卡尔积-—-列表推导式的嵌套"><a href="#笛卡尔积-—-列表推导式的嵌套" class="headerlink" title="笛卡尔积 — 列表推导式的嵌套"></a>笛卡尔积 — 列表推导式的嵌套</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>colors = [<span class="string">'blacklack'</span>, <span class="string">'red'</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>sizes = [<span class="string">'M'</span>, <span class="string">'S'</span>, <span class="string">'L'</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>tshirts = [(color, size) <span class="keyword">for</span> color <span class="keyword">in</span> colors <span class="keyword">for</span> size <span class="keyword">in</span> sizes]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>tshirts</div><div class="line">[(<span class="string">'blacklack'</span>, <span class="string">'M'</span>), (<span class="string">'blacklack'</span>, <span class="string">'S'</span>), (<span class="string">'blacklack'</span>, <span class="string">'L'</span>), (<span class="string">'red'</span>, <span class="string">'M'</span>), (<span class="string">'red'</span>, <span class="string">'S'</span>), (<span class="string">'red'</span>, <span class="string">'L'</span>)]</div></pre></td></tr></table></figure>
 <h3 id="生成器表达式"><a href="#生成器表达式" class="headerlink" title="生成器表达式"></a>生成器表达式</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>tshirts = ((color, size) <span class="keyword">for</span> color <span class="keyword">in</span> colors <span class="keyword">for</span> size <span class="keyword">in</span> sizes)</div></pre></td></tr></table></figure>
 <h3 id="元组拆包（python3）"><a href="#元组拆包（python3）" class="headerlink" title="元组拆包（python3）"></a>元组拆包（python3）</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>a, b, *rest = range(<span class="number">5</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>a, b, rest</div><div class="line">(<span class="number">0</span>, <span class="number">1</span>, [<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>])</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>a, *body, c, d = range(<span class="number">5</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>a, *body, c, d</div><div class="line">(<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>)</div></pre></td></tr></table></figure>
-<p>###具名元组</p>
-<p>定义元组，需要两个参数，第一个参数是类名，另一个是类的各个字段的名字。后者可以是由数个字符串组成的可迭代对象，或者是由空格隔开的字段名组成的字符串</p>
+<h3 id="具名元组"><a href="#具名元组" class="headerlink" title="具名元组"></a>具名元组</h3><p>定义元组，需要两个参数，第一个参数是类名，另一个是类的各个字段的名字。后者可以是由数个字符串组成的可迭代对象，或者是由空格隔开的字段名组成的字符串</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> collections <span class="keyword">import</span> namedtuple</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>City = namedtuple(<span class="string">'City'</span>, <span class="string">'name country population coordinates'</span>)</div></pre></td></tr></table></figure>
 <p>具名元组的使用</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>tokyo = City(<span class="string">'Tokyo'</span>, <span class="string">'JP'</span>, <span class="number">36.933</span>, (<span class="number">35.6</span>, <span class="number">139.6</span>))</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>tokyo</div><div class="line">City(name=<span class="string">'Tokyo'</span>, country=<span class="string">'JP'</span>, population=<span class="number">36.933</span>, coordinates=(<span class="number">35.6</span>, <span class="number">139.6</span>))</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>tokyo.name</div><div class="line"><span class="string">'Tokyo'</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>tokyo.population</div><div class="line"><span class="number">36.933</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>tokyo[<span class="number">1</span>]</div><div class="line"><span class="string">'JP'</span></div></pre></td></tr></table></figure>
@@ -419,8 +420,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>a = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">8</span>, <span class="number">9</span>]</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>bisect.insort(a, <span class="number">5</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>a</div><div class="line">[<span class="number">1</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">8</span>, <span class="number">9</span>]</div></pre></td></tr></table></figure>
 <h3 id="除数组以外的数据结构"><a href="#除数组以外的数据结构" class="headerlink" title="除数组以外的数据结构"></a>除数组以外的数据结构</h3><h4 id="array数组"><a href="#array数组" class="headerlink" title="array数组"></a>array数组</h4><p>只能存放同一个类型的数据，高效，节约存储空间</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> array <span class="keyword">import</span> array</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>floats = array(<span class="string">'d'</span>, (random() <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>**<span class="number">7</span>)))</div></pre></td></tr></table></figure>
-<p>####collections.deque双端队列</p>
-<p>O(1)复杂度从两端添加或者删除元素， O(n)复杂度随机取值</p>
+<h4 id="collections-deque双端队列"><a href="#collections-deque双端队列" class="headerlink" title="collections.deque双端队列"></a>collections.deque双端队列</h4><p>O(1)复杂度从两端添加或者删除元素， O(n)复杂度随机取值</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> collections <span class="keyword">import</span> deque</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>dq = deque(range(<span class="number">10</span>), maxlen=<span class="number">10</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>dq</div><div class="line">deque([<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>], maxlen=<span class="number">10</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>dq.rotate(<span class="number">3</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>dq</div><div class="line">deque([<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>], maxlen=<span class="number">10</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>dq.pop()</div><div class="line"><span class="number">6</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>dq</div><div class="line">deque([<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>], maxlen=<span class="number">10</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>dq.append(<span class="number">998</span>)</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>dq</div><div class="line">deque([<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">998</span>], maxlen=<span class="number">10</span>)</div></pre></td></tr></table></figure>
 <h4 id="queue"><a href="#queue" class="headerlink" title="queue"></a>queue</h4><p>提供了线程安全队列</p>
 <h4 id="heapq"><a href="#heapq" class="headerlink" title="heapq"></a>heapq</h4><p>可以当作堆队列，优先队列，有 heappush, heappop等方法</p>
@@ -609,10 +609,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
+            Übersicht
           </li>
         </ul>
       
@@ -633,7 +633,7 @@
             <div class="site-state-item site-state-posts">
               <a href="/archives">
                 <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">posts</span>
+                <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
           
@@ -646,7 +646,7 @@
             <div class="site-state-item site-state-tags">
               
                 <span class="site-state-item-count">8</span>
-                <span class="site-state-item-name">tags</span>
+                <span class="site-state-item-name">Tags</span>
               
             </div>
           
@@ -687,7 +687,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#《Fluent-Python》读书笔记-——-第一章-数据结构"><span class="nav-number">1.</span> <span class="nav-text">《Fluent Python》读书笔记 —— 第一章    数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-序列构成的数组"><span class="nav-number">1.1.</span> <span class="nav-text">1. 序列构成的数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#可变序列与不可变序列"><span class="nav-number">1.1.1.</span> <span class="nav-text">可变序列与不可变序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#笛卡尔积-—-列表推导式的嵌套"><span class="nav-number">1.1.2.</span> <span class="nav-text">笛卡尔积 — 列表推导式的嵌套</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生成器表达式"><span class="nav-number">1.1.3.</span> <span class="nav-text">生成器表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#元组拆包（python3）"><span class="nav-number">1.1.4.</span> <span class="nav-text">元组拆包（python3）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#切片"><span class="nav-number">1.1.5.</span> <span class="nav-text">切片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#序列的增量赋值"><span class="nav-number">1.1.6.</span> <span class="nav-text">序列的增量赋值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用bisect来管理已排序的序列"><span class="nav-number">1.1.7.</span> <span class="nav-text">用bisect来管理已排序的序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#除数组以外的数据结构"><span class="nav-number">1.1.8.</span> <span class="nav-text">除数组以外的数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#array数组"><span class="nav-number">1.1.8.1.</span> <span class="nav-text">array数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#queue"><span class="nav-number">1.1.8.2.</span> <span class="nav-text">queue</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#heapq"><span class="nav-number">1.1.8.3.</span> <span class="nav-text">heapq</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-字典集合"><span class="nav-number">1.2.</span> <span class="nav-text">2. 字典集合</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字典推导"><span class="nav-number">1.2.1.</span> <span class="nav-text">字典推导</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#setdefault"><span class="nav-number">1.2.2.</span> <span class="nav-text">setdefault</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#defaultdict"><span class="nav-number">1.2.3.</span> <span class="nav-text">defaultdict</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特殊方法-missing"><span class="nav-number">1.2.4.</span> <span class="nav-text">特殊方法__missing__</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不可变的映射类型"><span class="nav-number">1.2.5.</span> <span class="nav-text">不可变的映射类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集合推导"><span class="nav-number">1.2.6.</span> <span class="nav-text">集合推导</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集合的常见操作"><span class="nav-number">1.2.7.</span> <span class="nav-text">集合的常见操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dict的实现及其导致的结果"><span class="nav-number">1.2.8.</span> <span class="nav-text">dict的实现及其导致的结果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-文本和字节序列"><span class="nav-number">1.3.</span> <span class="nav-text">3. 文本和字节序列</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python2-字符类型"><span class="nav-number">1.3.1.</span> <span class="nav-text">Python2 字符类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#str-与-unicode-的转换"><span class="nav-number">1.3.2.</span> <span class="nav-text">str 与 unicode 的转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UnicodeXXXError-错误的原因"><span class="nav-number">1.3.3.</span> <span class="nav-text">UnicodeXXXError 错误的原因</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#case-1"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">case 1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#case-2"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">case 2</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#乱码"><span class="nav-number">1.3.4.</span> <span class="nav-text">乱码</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#《Fluent-Python》读书笔记-——-第一章-数据结构"><span class="nav-number">1.</span> <span class="nav-text">《Fluent Python》读书笔记 —— 第一章    数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-序列构成的数组"><span class="nav-number">1.1.</span> <span class="nav-text">1. 序列构成的数组</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#可变序列与不可变序列"><span class="nav-number">1.1.1.</span> <span class="nav-text">可变序列与不可变序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#笛卡尔积-—-列表推导式的嵌套"><span class="nav-number">1.1.2.</span> <span class="nav-text">笛卡尔积 — 列表推导式的嵌套</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生成器表达式"><span class="nav-number">1.1.3.</span> <span class="nav-text">生成器表达式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#元组拆包（python3）"><span class="nav-number">1.1.4.</span> <span class="nav-text">元组拆包（python3）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具名元组"><span class="nav-number">1.1.5.</span> <span class="nav-text">具名元组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#切片"><span class="nav-number">1.1.6.</span> <span class="nav-text">切片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#序列的增量赋值"><span class="nav-number">1.1.7.</span> <span class="nav-text">序列的增量赋值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用bisect来管理已排序的序列"><span class="nav-number">1.1.8.</span> <span class="nav-text">用bisect来管理已排序的序列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#除数组以外的数据结构"><span class="nav-number">1.1.9.</span> <span class="nav-text">除数组以外的数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#array数组"><span class="nav-number">1.1.9.1.</span> <span class="nav-text">array数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#collections-deque双端队列"><span class="nav-number">1.1.9.2.</span> <span class="nav-text">collections.deque双端队列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#queue"><span class="nav-number">1.1.9.3.</span> <span class="nav-text">queue</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#heapq"><span class="nav-number">1.1.9.4.</span> <span class="nav-text">heapq</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-字典集合"><span class="nav-number">1.2.</span> <span class="nav-text">2. 字典集合</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#字典推导"><span class="nav-number">1.2.1.</span> <span class="nav-text">字典推导</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#setdefault"><span class="nav-number">1.2.2.</span> <span class="nav-text">setdefault</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#defaultdict"><span class="nav-number">1.2.3.</span> <span class="nav-text">defaultdict</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特殊方法-missing"><span class="nav-number">1.2.4.</span> <span class="nav-text">特殊方法__missing__</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不可变的映射类型"><span class="nav-number">1.2.5.</span> <span class="nav-text">不可变的映射类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集合推导"><span class="nav-number">1.2.6.</span> <span class="nav-text">集合推导</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集合的常见操作"><span class="nav-number">1.2.7.</span> <span class="nav-text">集合的常见操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dict的实现及其导致的结果"><span class="nav-number">1.2.8.</span> <span class="nav-text">dict的实现及其导致的结果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-文本和字节序列"><span class="nav-number">1.3.</span> <span class="nav-text">3. 文本和字节序列</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python2-字符类型"><span class="nav-number">1.3.1.</span> <span class="nav-text">Python2 字符类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#str-与-unicode-的转换"><span class="nav-number">1.3.2.</span> <span class="nav-text">str 与 unicode 的转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UnicodeXXXError-错误的原因"><span class="nav-number">1.3.3.</span> <span class="nav-text">UnicodeXXXError 错误的原因</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#case-1"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">case 1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#case-2"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">case 2</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#乱码"><span class="nav-number">1.3.4.</span> <span class="nav-text">乱码</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -719,7 +719,7 @@
 
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
