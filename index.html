@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <meta name=viewport content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="initial-scale=0.8, minimum-scale=0.1, maximum-scale=2.0, user-scalable=yes\">
   <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
   <style type="text/css">
     /* Color scheme stolen from Sergey Karayev */
@@ -18,14 +18,23 @@
       text-decoration: none;
     }
 
-    body,
+    body {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 18px;
+    }
+
     td,
     th,
     tr,
     p,
     a {
       font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 20px
+      font-size: 18px
+    }
+    /* small font */
+    ps {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 18px
     }
 
     strong {
@@ -40,7 +49,7 @@
 
     papertitle {
       font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 700;
     }
 
@@ -54,6 +63,15 @@
     name {
       font-family: 'Lato', Verdana, Helvetica, sans-serif;
       font-size: 32px;
+    }
+
+    .small{
+        line-height: 0.5em;
+        font-size: 16px
+    }
+
+    .small-font{
+        font-size: 18px
     }
 
     .one {
@@ -227,7 +245,6 @@
                 <br>
                 <a href="https://arxiv.org/abs/2305.04412">[paper]</a>
                 <a href="https://github.com/Letian-Wang/asaprl">[code]</a>
-                <br>
                 <p>
                    We present an efficient reinforcement learning (ASAP-RL) that simultaneously leverages parameterized motion skills and expert priors for autonomous vehicles to navigate in complex dense traffic.
                 </p>
@@ -319,7 +336,7 @@
                 <a href="https://github.com/deepcs233/TIN">[code]</a>
                 <br>
                 <p>
-                    We present a simple yet powerful operator – temporalinterlacing network (TIN). Instead of learning the temporal features, TIN fuses the two kinds of information by interlacing spatial representations from the past to the future, and vice versa.
+                    We present a simple yet powerful operator – temporal interlacing network (TIN). Instead of learning the temporal features, TIN fuses the two kinds of information by interlacing spatial representations from the past to the future, and vice versa.
                 </p>
             </td>
           </tr>
@@ -407,22 +424,22 @@
         </table>
         <ul>
           <li>
-            <p>Postgraduate Scholarship, the Chinese University of Hong Kong, 2023 ~ now</p>
+            <p class="small">Postgraduate Scholarship, the Chinese University of Hong Kong, 2023 ~ now</p>
           </li>
           <li>
-              <p>The First Prize, <a href="https://leaderboard.carla.org/leaderboard/"> CARLA Autonomous Driving Challenge (sensor track)</a>, 2022</p>
+              <p class="small">The First Prize, <a href="https://leaderboard.carla.org/leaderboard/"> CARLA Autonomous Driving Challenge (sensor track)</a>, 2022</p>
           </li>
           <li>
-            <p>The First Prize, CVPR20 ActivityNet Challenge (<a href="http://activity-net.org/challenges/2020/tasks/guest_kinetics.html/">Kinetics700</a> track and  <a href="https://www.youtube.com/watch?v=zJPEmG3LCH4&amp;list=PLw6H4u-XW8siSxqdRVcD5aBn3OTuA7M7x/">AVA track</a>), 2020</p>
+            <p class="small">The First Prize, CVPR20 ActivityNet Challenge (<a href="http://activity-net.org/challenges/2020/tasks/guest_kinetics.html/">Kinetics700</a> track and  <a href="https://www.youtube.com/watch?v=zJPEmG3LCH4&amp;list=PLw6H4u-XW8siSxqdRVcD5aBn3OTuA7M7x/">AVA track</a>), 2020</p>
           </li>
           <li>
-            <p>The First Prize, <a href="http://moments.csail.mit.edu/results2019.html/">ICCV19 Multi-Moments in Time (MIT) Challenge</a>, 2019</p>
+            <p class="small">The First Prize, <a href="http://moments.csail.mit.edu/results2019.html/">ICCV19 Multi-Moments in Time (MIT) Challenge</a>, 2019</p>
           </li>
           <li>
-            <p>Outstanding Graduate of UESTC, 2019</p>
+            <p class="small">Outstanding Graduate of UESTC, 2019</p>
           </li>
           <li>
-            <p>National Scholarship, University of Electronic Science and Technology of China, 2017</p>
+            <p class="small">National Scholarship, University of Electronic Science and Technology of China, 2017</p>
           </li>
         </ul>
         <br />
@@ -437,16 +454,16 @@
         </table>
         <ul>
           <li>
-              <p><a href="https://github.com/Sense-X/X-Temporal">X-Temporal</a>, Easily implement SOTA video understanding methods with PyTorch on multiple machines and GPUs</p>
+              <p class="small"><a href="https://github.com/Sense-X/X-Temporal">X-Temporal</a> <img alt="stars" src="https://img.shields.io/github/stars/Sense-X/X-Temporal?style=social" /> , Easily implement SOTA video understanding methods with PyTorch on multiple machines and GPUs</p>
           </li>
           <li>
-              <p><a href="https://github.com/opendilab/awesome-end-to-end-autonomous-driving">Awesome End-to-End Autonomous Driving</a>, Paper list about end-to-end autonomous driving</p>
+              <p class="small"><a href="https://github.com/opendilab/awesome-end-to-end-autonomous-driving">Awesome End-to-End Autonomous Driving</a> <img alt="stars" src="https://img.shields.io/github/stars/opendilab/awesome-end-to-end-autonomous-driving?style=social" /> , Paper list about end-to-end autonomous driving</p>
           </li>
           <li>
-              <p><a href="https://github.com/opendilab/DI-drive">DI-drive</a>, Decision Intelligence Platform for Autonomous Driving simulation</p>
+              <p class="small"><a href="https://github.com/opendilab/DI-drive">DI-drive</a> <img alt="stars" src="https://img.shields.io/github/stars/opendilab/DI-drive?style=social" /> , Decision Intelligence Platform for Autonomous Driving simulation</p>
           </li>
           <li>
-              <p><a href="https://github.com/deepcs233/jieba_fast">Fast Jieba</a>, Fast Chinese word segmentation library, rewriting Jieba core functions (<i>accumulated 138,000 downloads</i>)</p>
+              <p class="small"><a href="https://github.com/deepcs233/jieba_fast">Fast Jieba</a> <img alt="stars" src="https://img.shields.io/github/stars/deepcs233/jieba_fast?style=social" /> , Fast Chinese word segmentation library, rewriting Jieba core functions (<i>accumulated 138K downloads</i>)</p>
           </li>
         </ul>
         <br />
@@ -464,7 +481,7 @@
             <p align=right>
               <a href="https://ai.stanford.edu/~kaidicao/"> Page Template </a>
               <a class="pull-right" href="#">
-                  <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=400&t=tt&d=VkYT7USR1EDQkDTDlP7q_8FwHSe_Y6-QtMU3WeV4Wgc&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff"></script>
+                  <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=500&t=tt&d=VkYT7USR1EDQkDTDlP7q_8FwHSe_Y6-QtMU3WeV4Wgc&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff"></script>
               </a>
             </p>
           </div>
