@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>LMDrive</title>
+  <link rel="icon" type="image/x-icon" href="static/icons/hands.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">LMDrive: Closed-Loop End-to-End Driving with Large Language Models</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="http://hao-shao.com/" target="_blank">Hao Shao</a>, </span>
+                <span class="author-block">
+                  <a href="" target="_blank">Yuxuan Hu</a>,</span>
+                  <span class="author-block">
+                    <a href="https://letianwang0.wixsite.com/myhome" target="_blank">Letian Wang</a>,</span>
+                  <span class="author-block">
+                    <a href="https://www.trailab.utias.utoronto.ca/stevenwaslander" target="_blank">Steven L. Waslander</a>,</span>
+                <br>
+                  <span class="author-block">
+                    <a href="https://liuyu.us/" target="_blank">Yu Liu</a>,</span>
+                  <span class="author-block">
+                    <a href="http://www.ee.cuhk.edu.hk/~hsli/" target="_blank">Hongsheng Li</a>,</span>
+                  </span>
+                  </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><b style="color:#f68946; font-weight:normal">&#x25B6 </b> CUHK MMLab </b></span>
+              <span class="author-block"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> SenseTime Research</span>
+              <span class="author-block"><b style="color:#F2A900; font-weight:normal">&#x25B6 </b> CPII under InnoHK </span>
+              <br>
+              <span class="author-block"><b style="color:#ED11B6; font-weight:normal">&#x25B6 </b> University of Toronto </span>
+              <span class="author-block"><b style="color:#04CF04; font-weight:normal">&#x25B6 </b> Shanghai AILab </span>
+            </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/2312.07488.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <!-- <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                </span> -->
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/opendilab/LMDrive" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2312.07488" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+                <span class="link-block">
+                  <a href="https://huggingface.co/datasets/deepcs233/LMDrive" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-database"></i>
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://github.com/opendilab/LMDrive?tab=readme-ov-file#lmdrive-weigths" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-share-square"></i>
+                    </span>
+                    <span>Model</span>
+                  </a>
+                </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/lmdrive.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+          An end-to-end, closed-loop, language-based autonomous driving framework, which interacts with the dynamic environment via multi-modal multi-view sensor data and natural language instructions.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+              Despite significant recent progress in the field of autonomous driving, modern methods still struggle and can incur serious accidents when encountering long-tail unforeseen events and challenging urban scenarios. On the one hand, large language models (LLM) have shown impressive reasoning capabilities that approach "Artificial General Intelligence". On the other hand, previous autonomous driving methods tend to rely on limited-format inputs (e.g. sensor data and navigation waypoints), restricting the vehicle's ability to understand language information and interact with humans. 
+          </p>
+		  <ol>
+    <li> We propose <strong>a novel end-to-end, closed-loop, language-based autonomous driving framework, LMDrive</strong>, which interacts with the dynamic environment via multi-modal multi-view sensor data and natural language instructions. 
+    <li>  We provide a <strong>dataset with about 64K data clips</strong>, where each clip includes one navigation instruction, several notice instructions, a sequence of multi-modal multi-view sensor data, and control signals. The duration of the clip spans from 2 to 20 seconds.
+
+    <li> We present the benchmark <strong>LangAuto</strong> for evaluating the autonomous agents that take language instructions as navigation inputs, which include misleading/long instructions and challenging adversarial driving scenarios.
+    <li> We conduct <strong>extensive closed-loop experiments</strong> to demonstrate the effectiveness of the proposed framework, and analyze different components of LMDrive to shed light on continuing research along this direction. 
+		  </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<section class="section">
+  <!-- Results. -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-six-fifths">
+      <h2 class="title is-3"><img id="painting_icon" width="3%" src="static/icons/driving-school.png"> LMDrive Dataset </h2>
+    </div>
+  </div>
+  <!-- </div> -->
+  <!--/ Results. -->    
+<div class="container is-max-desktop">
+
+  <div class="columns is-centered">
+    <div class="column is-full-width">
+      <div class="content has-text-justified"> 
+        <p> We provide a dataset with about <strong>64K</strong> data clips, where each clip includes one navigation instruction, several notice instructions, a sequence of multi-modal multi-view sensor data, and control signals. The duration of the clip spans from 2 to 20 seconds.
+        </p>
+      </div>
+      <centering>
+        <div style="text-align: center;">
+          <img id="teaser" width="70%" src="static/images/dataset.png">     
+          <p>Two examples of the collected data with corresponding labeled navigation instructions and optional notice instructions.</p>
+        </div>
+      </centering>           
+    </div>
+      </div>
+<!--
+      <centering>
+        <div style="text-align: center;">
+          <img id="teaser" width="70%" src="static/images/dataset-hist.png">     
+          <p>Distribution of parsed clips in terms of clip length and the corresponding navigation instruction type.</p>
+        </div>
+      </centering>           
+    </div>
+-->
+<br>
+
+        <div style="text-align: center;">
+      <centering>
+<table border="1" style="margin-left: auto; margin-right: auto;" width="60%">
+  <tr>
+    <th><strong>Type</strong></th>
+    <th>Three randomly chosen instructions of each instruction type</th>
+  </tr>
+  <tr>
+    <td><strong>Follow</strong></td>
+    <td>Maintain your current course until the upcoming intersection.<br>In [x] meters, switch to left lane.<br>Ease on to the left and get set to join the highway.</td>
+  </tr>
+  <tr>
+    <td><strong>Turn</strong></td>
+    <td>After [x] meters, take a left.<br>At the next intersection, just keep heading straight, no turn.<br>You’ll be turning left at the next T-junction, alright?</td>
+  </tr>
+  <tr>
+    <td><strong>Others</strong></td>
+    <td>Feel free to start driving.<br>Slow down now.<br>Head to the point, next one’s [x] meters ahead, [y] meters left/right.</td>
+  </tr>
+  <tr>
+    <td><strong>Notice</strong></td>
+    <td>Watch for walkers up front.<br>Just a heads up, there’s a bike ahead.<br>Please be aware of the red traffic signal directly in front of you.</td>
+  </tr>
+</table>
+  <p>Examples of considered navigation instructions (follow, turn, others) and notice instructions. [x] and [y] represent the float number for a specific distance.</p>
+      </centering>           
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  <!-- Results. -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-six-fifths">
+      <h2 class="title is-3"><img id="painting_icon" width="3%" src="static/icons/framework.png"> Pipeline </h2>
+    </div>
+  </div>
+  <!-- </div> -->
+  <!--/ Results. -->    
+<div class="container is-max-desktop">
+
+  <div class="columns is-centered">
+    <div class="column is-full-width">
+      <div class="content has-text-justified"> 
+          <p>
+  The structure of the proposed LMDrive model, which consists of two major components:
+</p>
+<ol>
+    <li> A <strong>vision encoder</strong> that processes multi-view multi-modal sensor data (camera and LiDAR) for scene understanding and generating visual tokens.</li>
+  <li> A <strong>large language model</strong> and its associated component (tokenizer, Q-Former, and adapters) that processes all the historic visual tokens and the language instructions (navigation instruction and optional notice instruction), to predict the control signal and whether the given instruction is completed.</li>
+</ol>
+      </div>
+      <centering>
+        <div style="text-align: center;">
+          <img id="teaser" width="70%" src="static/images/framework.png">     
+        </div>
+      </centering>           
+    </div>
+      </div>
+        <div  class="content has-text-justified">
+          <p>The detailed structure of the vision encoder, which takes as input the multi-view multi-modality sensor data:</p>
+		  <ol>
+              <li>In the <strong>pre-training stage</strong>, the vision encoder is appended with prediction headers to perform pre-training tasks (object detection, traffic light status classification, and future waypoint prediction).
+              <li>In the <strong>instruction-finetuning stage and inference stage</strong>, the prediction headers are discarded, and the vision encoder is frozen to generate visual tokens to feed into the LLM.
+		  </ol>
+        <div style="text-align: center;">
+          <img id="teaser" width="70%" src="static/images/vision_encoder.png">     
+        </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <!-- Results. -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-six-fifths">
+      <h2 class="title is-3">
+        <img id="painting_icon" width="3%" src="https://cdn-icons-png.flaticon.com/512/3515/3515174.png">
+        LangAuto Benchmark & Performance
+      </h2>
+    </div>
+  </div>
+  <!-- /Results. -->
+
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
+          <text>
+            <p>
+              The LangAuto Benchmark is the first to evaluate closed-loop driving with language instructions in CARLA. It differs from previous benchmarks like Town05 and Longest6 by using natural language instructions instead of discrete commands or waypoints.
+            </p>
+
+            <h3>Features</h3>
+            <ul>
+              <li>Uses natural language to guide the vehicle to the destination, incorporating appropriate notice for enhanced safety.</li>
+			  <li>Covers all 8 towns in CARLA, featuring various scenarios (highways, intersections, roundabouts) and 16 environmental conditions, including 7 weather and 3 daylight conditions.</li>
+              <li>Supports different tracks, providing a diverse range of driving challenges and scenarios.</li>
+			  <li>About 5% of the instructions are intentionally misleading, lasting 1-2 seconds. The agent must identify and ignore these instructions for safe navigation.</li>
+            </ul>
+
+            <h3>Tracks</h3>
+            <ul>
+              <li>
+                <strong>LangAuto Track:</strong> Navigation instructions are updated based on the agent's position. Includes three sub-tracks (Tiny/ Short/ Long) for different route lengths.
+              </li>
+              <li>
+                <strong>LangAuto-Notice Track:</strong> Adds notice instructions to simulate real-time assistance in complex scenarios.
+              </li>
+              <li>
+                <strong>LangAuto-Sequential Track:</strong> Combines consecutive instructions into a single long instruction, mimicking real-world navigation software.
+              </li>
+            </ul>
+            <h3>Performance</h3>
+      			<centering>
+        		<div style="text-align: center;">
+          		<img id="teaser" width="90%" src="static/images/lmdrive_performance.png">     
+        		</div>
+      			</centering>           
+          </text>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="width: 80%;margin-left:auto;margin-right:auto; text-align: center;">
+    <div class="column is-six-fifths">
+      <h2 class="title is-3">
+        <img id="painting_icon" width="3%" src="static/icons/demo.png">
+        Demos
+      </h2>
+    </div>
+      <font size="+1">
+    <p class="serif" style="color: red; font-weight: bold">Click to Play the demo cases! </p>
+  </font>
+  <!-- Results. -->
+  <div class="row">
+    <div class="col">
+      <video class="clickplay" width="100%">
+        <source src="static/videos/navigation_instruction.mp4" type="video/mp4">
+      </video>
+      <p><strong>Navigation instruction</strong></p>
+    </div>
+    <div class="col">
+      <video class="clickplay" width="100%">
+        <source src="static/videos/distance_instruction.mp4" type="video/mp4">
+      </video>
+      <p><strong>Navigation instruction (with distance)</strong></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <video class="clickplay" width="100%">
+        <source src="static/videos/misleading_instruction.mp4" type="video/mp4">
+      </video>
+      <p><strong>Misleading instruction</strong></p>
+    </div>
+    <div class="col">
+      <video class="clickplay" width="100%">
+        <source src="static/videos/notice_instruction.mp4" type="video/mp4">
+      </video>
+      <p><strong>Notice instruction</strong></p>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!-- Youtube video -->
+
+<!--
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Video Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+<!-- End youtube video -->
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+        @misc{shao2023lmdrive,
+              title={LMDrive: Closed-Loop End-to-End Driving with Large Language Models}, 
+              author={Hao Shao and Yuxuan Hu and Letian Wang and Steven L. Waslander and Yu Liu and Hongsheng Li},
+              year={2023},
+              eprint={2312.07488},
+              archivePrefix={arXiv},
+              primaryClass={cs.CV}
+        }
+      </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+</body>
+
+
+<script>
+  var videos = document.getElementsByClassName("clickplay");
+  for (var i = 0; i < videos.length; i++) {
+    videos[i].addEventListener("click", function() {
+      // Play the video
+      this.play();
+
+      // Display the duration
+      var duration = this.duration.toFixed(2);
+      var durationDisplay = document.createElement("span");
+      this.parentNode.insertBefore(durationDisplay, this.nextSibling);
+    });
+
+    videos[i].addEventListener("ended", function() {
+      // Reset the video to the start
+      this.pause();
+      this.currentTime = 0;
+
+      // Optionally, remove the duration display when video ends
+      var durationDisplay = this.nextSibling;
+      if (durationDisplay && durationDisplay.tagName === "SPAN") {
+        this.parentNode.removeChild(durationDisplay);
+      }
+    });
+  }
+  </script>
+
+  </html>
+
