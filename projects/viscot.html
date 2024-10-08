@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="Visual CoT: Advancing Multi-Modal Language Models with a Comprehensive Dataset and Benchmark for Chain-of-Thought Reasoning"/>
+  <meta property="og:description" content="Visual CoT: Advancing Multi-Modal Language Models with a Comprehensive Dataset and Benchmark for Chain-of-Thought Reasoning"/>
+  <meta property="og:url" content="https://hao-shao.com/projects/viscot.html"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>VisCoT</title>
+  <link rel="icon" type="image/x-icon" href="static/icons/visual-thinking.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Visual CoT: Advancing Multi-Modal Language Models with a Comprehensive Dataset and Benchmark for Chain-of-Thought Reasoning</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="http://hao-shao.com/" target="_blank">Hao Shao</a>, </span>
+                <span class="author-block">
+                  <a href="http://thesouthfrog.com/about.me/" target="_blank">Shengju Qian</a>,</span>
+                <span class="author-block">
+                  <a href="" target="_blank">Xiao Han</a>,</span>
+                <span class="author-block">
+                  <a href="https://songguanglu.github.io/" target="_blank">Guanglu Song</a>,</span>
+                <br>
+                  <span class="author-block">
+                    <a href="" target="_blank">Zhuofan Zong</a>,</span>
+                  <span class="author-block">
+                    <a href="https://letianwang0.wixsite.com/myhome" target="_blank">Letian Wang</a>,</span>
+                  <span class="author-block">
+                    <a href="https://liuyu.us/" target="_blank">Yu Liu</a>,</span>
+                  <span class="author-block">
+                    <a href="http://www.ee.cuhk.edu.hk/~hsli/" target="_blank">Hongsheng Li</a>,</span>
+                  </span>
+                  </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><b style="color:#f68946; font-weight:normal">&#x25B6 </b> CUHK MMLab </b></span>
+              <span class="author-block"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> SenseTime Research</span>
+              <span class="author-block"><b style="color:#F2A900; font-weight:normal">&#x25B6 </b> CPII under InnoHK </span>
+              <br>
+              <span class="author-block"><b style="color:#ED11B6; font-weight:normal">&#x25B6 </b> University of Toronto </span>
+              <span class="author-block"><b style="color:#04CF04; font-weight:normal">&#x25B6 </b> Shanghai AILab </span>
+            </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/2403.16999" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <!-- <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                </span> -->
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/deepcs233/Visual-CoT" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2403.16999" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+                <span class="link-block">
+                  <a href="https://huggingface.co/datasets/deepcs233/Visual-CoT" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-database"></i>
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://huggingface.co/collections/deepcs233/viscot-65fe883e2a0cdd3c59fc5d63" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-share-square"></i>
+                    </span>
+                    <span>Model</span>
+                  </a>
+                </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<!--<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <source src="static/videos/lmdrive.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+          An end-to-end, closed-loop, language-based autonomous driving framework, which interacts with the dynamic environment via multi-modal multi-view sensor data and natural language instructions.
+      </h2>
+    </div>
+  </div>
+</section> -->
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Introduction</h2>
+        <div class="content has-text-justified">
+            <p>With the success of large language models (LLMs) like <b>GPT-4</b> and <b>Gemini</b>, researchers are now incorporating visual understanding into these models, leading to the rise of <b>multi-modal large language models (MLLMs)</b> like <b>LLaVA</b>, <b>SPHINX</b>, and <b>Qwen-VL</b>. These models extract visual tokens from input images, yet they often struggle with efficiently processing intricate visual details, unlike humans who dynamically focus on specific image regions.</p>
+
+<p>While MLLMs such as <b>CLIP</b>, <b>EVA2-CLIP</b>, and <b>InternVL</b> process images with a fixed-grain approach, mimicking human-like reasoning requires identifying key image regions and zooming in to adjust the context dynamically. Currently, MLLMs rely heavily on text data, lacking the capability for multi-turn, dynamic visual input handling and interpretable reasoning. This challenge is further compounded by the lack of intermediate visual chain-of-thought (CoT) supervision in existing visual question-answering (VQA) datasets and the reliance on static image context inputs in popular MLLM pipelines.</p>
+
+<p>To address these challenges, we introduce a <b>438k visual CoT dataset</b>, where each visual question-answer pair includes a bounding box highlighting the key image region essential for answering the question. This dataset contains 98k question-answer pairs with detailed reasoning steps to instruct MLLMs logically. Our proposed pipeline enhances visual CoT reasoning by focusing on key regions and providing step-by-step interpretability.</p>
+
+<ul>
+  <li><b>Visual CoT dataset</b>: 438k data items annotated with bounding boxes and reasoning steps.</li>
+  <li><b>Novel multi-turn processing pipeline</b>: Dynamically focuses on visual inputs with interpretable reasoning.</li>
+  <li><b>Visual CoT benchmark</b>: Evaluates MLLMs in scenarios requiring focused visual region identification.</li>
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<section class="section hero is-light">
+  <!-- Results. -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-six-fifths">
+      <h2 class="title is-1"><img id="painting_icon" style="width:1.5em;vertical-align: middle" src="static/icons/dataset.png"> VisCoT Dataset </h2>
+    </div>
+  </div>
+</section>
+
+  <!-- </div> -->
+  <!--/ Results. -->    
+<section class="section">
+<div class="container is-max-desktop">
+  <div class="columns is-centered">
+    <div class="column is-full-width">
+      <div class="content has-text-justified"> 
+        <div class="column is-six-fifths is-centered has-text-centered">
+            <h2 class="title is-3"> Overview </h2>
+        </div>
+		<p>There is a shortage of multimodal datasets for training <b>multi-modal large language models (MLLMs)</b> that need to identify specific regions in images to improve response performance. Datasets with grounding bbox annotations can help MLLMs output interpretable attention areas and enhance performance. To address this gap, we curate a <b>visual CoT dataset</b>, focusing on identifying critical image regions, as shown in Fig. 1 and Tab. 1. Each data sample includes a question, answer, and visual bounding box across five domains (see Tab. 2), with some samples providing extra detailed reasoning steps.</p>
+
+		<p>Our dataset integrates diverse data, including text/doc, fine-grained understanding, charts, general VQA, and relation reasoning, to support detailed visual and textual analysis:</p>
+
+		<ul>
+		  <li><b>Text/doc</b>: Enhances MLLM’s OCR and contextual understanding.</li>
+		  <li><b>Fine-grained understanding</b>: Aids in distinguishing subtle visual differences.</li>
+		  <li><b>Charts</b>: Improves interpretation of graphical data for business and scientific applications.</li>
+		  <li><b>General VQA</b>: Broadens the model's exposure to varied visual queries.</li>
+		  <li><b>Relation reasoning</b>: Develops spatial and contextual awareness for interactive tasks.</li>
+		</ul>
+
+		<p>These modalities ensure that the dataset not only addresses current gaps but also enhances MLLM versatility across diverse scenarios.</p>
+      </div>
+
+        </div>
+        </div>
+        </div>
+</section>
+
+<section class="section">
+    <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+
+
+        <div id="carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/viscot-overview1-1.png" alt="" width="50%"/>
+              <p>The visual CoT dataset covers five domains. The red bounding boxes highlight critical image regions that provide essential information for answering the questions.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/viscot-overview1-2.png" alt="" width="50%"/>
+              <p>The visual CoT dataset covers five domains. The red bounding boxes highlight critical image regions that provide essential information for answering the questions.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/viscot-overview1-3.png" alt="" width="50%"/>
+              <p>The visual CoT dataset covers five domains. The red bounding boxes highlight critical image regions that provide essential information for answering the questions.</p>
+            </div>
+          </div>
+          </div>
+        </div>
+        </div>
+
+</section>
+
+<section class="section">
+<div class="container is-max-desktop">
+  <div class="columns is-centered">
+    <div class="column is-full-width">
+      <centering>
+        <div style="text-align: center;">
+          <img id="teaser" width="70%" src="static/images/viscot-overview2.png">     
+          <p>One data example with detailed reasoning steps, of which we have collected about 98k of this type. The red bounding box shows the important image region for answering the question.</p>
+        </div>
+      </centering>           
+    </div>
+      </div>
+
+    <div class="column is-six-fifths is-centered has-text-centered">
+        <h2 class="title is-3"> Statistics </h2>
+    </div>
+        <br>
+        <div style="text-align: center;">
+          <img id="teaser" width="70%" src="static/images/viscot-statistics2.png">     
+          <p>The overview of the visual CoT dataset. The dataset spans five distinct domains and includes various source datasets, ensuring a broad representation of visual data styles.</p>
+        </div>
+        <br>
+        <div style="text-align: center;">
+          <img id="teaser" width="70%" src="static/images/viscot-statistics1.png">     
+          <p>Statistics of the proposed visual CoT dataset. We visualize the CoT bbox distribution, average bbox size, and average relative size of bbox area R for each source dataset.</p>
+        </div>
+    <br>
+  </div>
+</section>
+
+<section class="section">
+</section>
+
+<section class="section hero is-light">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-six-fifths">
+      <h2 class="title is-1"><img id="painting_icon" style="width:1.5em;vertical-align: middle" src="static/icons/viscot-pipeline.png"> VisCoT Pipeline </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+<div class="container is-max-desktop">
+
+  <div class="columns is-centered">
+    <div class="column is-full-width">
+      <div class="content has-text-justified"> 
+<p>We introduce a visual CoT MLLM framework, <b>VisCoT</b>, which uses standard models without modifications, serving as a baseline for enhancing MLLMs with visual CoT capabilities. The pipeline is illustrated in Fig. 3, with details in Appendix B.</p>
+
+<p>To train the MLLM, a CoT prompt is added: "Please provide the bounding box coordinate of the region that can help you answer the question better." VisCoT identifies the region and generates the bounding box. The ground truth bounding box is used to extract a localized image (X<sub>1</sub>) from the original (X<sub>0</sub>). Visual tokens {H<sub>0</sub>, H<sub>1</sub>} from both images are then integrated for more accurate answers.</p>
+
+
+      </div>
+      <centering>
+        <div style="text-align: center;">
+          <img id="teaser" width="70%" src="static/images/viscot-pipeline.png">     
+        </div>
+      </centering>           
+        </div>
+    </div>
+    <div class="column is-six-fifths is-centered has-text-centered">
+        <h2 class="title is-3"> Benchmark</h2>
+    </div>
+        <br>
+        <p>We provide an overview of our <b>visual CoT benchmark</b>, focusing on scenarios where the MLLM must concentrate on specific image regions. We use 12 source datasets (Fig. 1) and follow official training/evaluation splits when available, otherwise, we create random splits. The test sets of <b>SROIE</b>, <b>DUDE</b>, and <b>Visual7W</b> are used to evaluate zero-shot visual CoT capabilities. Following prior MLLM studies [28, 40], we use <b>ChatGPT</b> [45] to assign a numerical score between 0 and 1, where higher scores indicate better prediction accuracy.</p>
+    <div class="column is-six-fifths is-centered has-text-centered">
+        <h2 class="title is-3"> Results</h2>
+    </div>
+        <br>
+        <p>We evaluate <b>VisCoT</b> across various multi-modal tasks to assess its visual understanding ability. The Table shows improvements through the visual CoT benchmark. Compared to <b>LLaVA-1.5</b> on the visual CoT benchmark, our model shows significant improvements, especially in doc/text tasks and high-resolution images. For instance, in the <b>SROIE</b> dataset, which extracts key information from receipts, our model achieves 8× performance over the standard pipeline without the CoT process. This demonstrates the visual CoT pipeline’s efficacy in enhancing both visual and textual interpretation.</p>
+
+        <div style="text-align: center;">
+          <img id="teaser" width="70%" src="static/images/viscot-results.png">     
+        </div>
+  </div>
+</section>
+
+
+<div style="width: 80%;margin-left:auto;margin-right:auto; text-align: center;">
+    <div class="column is-six-fifths">
+      <h2 class="title is-3">
+        <img id="painting_icon" style="width:1.5em;vertical-align: middle" src="static/icons/demo.png">
+        Demos
+      </h2>
+    </div>
+</div>
+
+
+<!-- Youtube video -->
+
+<!--
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Video Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+<!-- End youtube video -->
+
+
+<section class="section">
+    <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+
+
+        <div id="carousel" class="carousel results-carousel">
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/viscot-demos/viscot-demo-1.png" alt="" width="50%"/>
+              <p>Visualization results of the VisCoT. Model-generated bounding boxes are shown in red, while ground truth (GT) bounding boxes are in blue.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/viscot-demos/viscot-demo-2.png" alt="" width="50%"/>
+              <p>Visualization results of the VisCoT. Model-generated bounding boxes are shown in red, while ground truth (GT) bounding boxes are in blue.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/viscot-demos/viscot-demo-3.png" alt="" width="50%"/>
+              <p>Visualization results of the VisCoT. Model-generated bounding boxes are shown in red, while ground truth (GT) bounding boxes are in blue.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/viscot-demos/viscot-demo-4.png" alt="" width="50%"/>
+              <p>Visualization results of the VisCoT. Model-generated bounding boxes are shown in red, while ground truth (GT) bounding boxes are in blue.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/viscot-demos/viscot-demo-5.png" alt="" width="50%"/>
+              <p>Visualization results of the VisCoT. Model-generated bounding boxes are shown in red, while ground truth (GT) bounding boxes are in blue.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/viscot-demos/viscot-demo-6.png" alt="" width="50%"/>
+              <p>Visualization results of the VisCoT. Model-generated bounding boxes are shown in red, while ground truth (GT) bounding boxes are in blue.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/viscot-demos/viscot-demo-7.png" alt="" width="50%"/>
+              <p>Visualization results of the VisCoT. Model-generated bounding boxes are shown in red, while ground truth (GT) bounding boxes are in blue.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/viscot-demos/viscot-demo-3.png" alt="" width="50%"/>
+              <p>Visualization results of the VisCoT. Model-generated bounding boxes are shown in red, while ground truth (GT) bounding boxes are in blue.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/viscot-demos/viscot-demo-9.png" alt="" width="50%"/>
+              <p>Visualization results of the VisCoT. Model-generated bounding boxes are shown in red, while ground truth (GT) bounding boxes are in blue.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/viscot-demos/viscot-demo-10.png" alt="" width="50%"/>
+              <p>Visualization results of the VisCoT. Model-generated bounding boxes are shown in red, while ground truth (GT) bounding boxes are in blue.</p>
+            </div>
+          </div>
+          <div class="box m-5">
+            <div class="content has-text-centered">
+              <img src="static/images/viscot-demos/viscot-demo-11.png" alt="" width="50%"/>
+              <p>Visualization results of the VisCoT. Model-generated bounding boxes are shown in red, while ground truth (GT) bounding boxes are in blue.</p>
+            </div>
+          </div>
+
+          </div>
+        </div>
+        </div>
+
+</section>
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+        @article{shao2024visual,
+          title={Visual cot: Unleashing chain-of-thought reasoning in multi-modal language models},
+          author={Shao, Hao and Qian, Shengju and Xiao, Han and Song, Guanglu and Zong, Zhuofan and Wang, Letian and Liu, Yu and Li, Hongsheng},
+          journal={arXiv preprint arXiv:2403.16999},
+          year={2024}
+        }
+      </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+</body>
+
+
+<script>
+  var videos = document.getElementsByClassName("clickplay");
+  for (var i = 0; i < videos.length; i++) {
+    videos[i].addEventListener("click", function() {
+      // Play the video
+      this.play();
+
+      // Display the duration
+      var duration = this.duration.toFixed(2);
+      var durationDisplay = document.createElement("span");
+      this.parentNode.insertBefore(durationDisplay, this.nextSibling);
+    });
+
+    videos[i].addEventListener("ended", function() {
+      // Reset the video to the start
+      this.pause();
+      this.currentTime = 0;
+
+      // Optionally, remove the duration display when video ends
+      var durationDisplay = this.nextSibling;
+      if (durationDisplay && durationDisplay.tagName === "SPAN") {
+        this.parentNode.removeChild(durationDisplay);
+      }
+    });
+  }
+  </script>
+
+  </html>
+
