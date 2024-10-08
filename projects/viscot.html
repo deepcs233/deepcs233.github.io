@@ -218,7 +218,7 @@
         <div class="column is-six-fifths is-centered has-text-centered">
             <h2 class="title is-3"> Overview </h2>
         </div>
-		<p>There is a shortage of multimodal datasets for training <b>multi-modal large language models (MLLMs)</b> that need to identify specific regions in images to improve response performance. Datasets with grounding bbox annotations can help MLLMs output interpretable attention areas and enhance performance. To address this gap, we curate a <b>visual CoT dataset</b>, focusing on identifying critical image regions, as shown in Fig. 1 and Tab. 1. Each data sample includes a question, answer, and visual bounding box across five domains (see Tab. 2), with some samples providing extra detailed reasoning steps.</p>
+		<p>There is a shortage of multimodal datasets for training <b>multi-modal large language models (MLLMs)</b> that need to identify specific regions in images to improve response performance. Datasets with grounding bbox annotations can help MLLMs output interpretable attention areas and enhance performance. To address this gap, we curate a <b>visual CoT dataset</b>, focusing on identifying critical image regions. Each data sample includes a question, answer, and visual bounding box across five domains, with some samples providing extra detailed reasoning steps.</p>
 
 		<p>Our dataset integrates diverse data, including text/doc, fine-grained understanding, charts, general VQA, and relation reasoning, to support detailed visual and textual analysis:</p>
 
@@ -315,7 +315,7 @@
   <div class="columns is-centered">
     <div class="column is-full-width">
       <div class="content has-text-justified"> 
-<p>We introduce a visual CoT MLLM framework, <b>VisCoT</b>, which uses standard models without modifications, serving as a baseline for enhancing MLLMs with visual CoT capabilities. The pipeline is illustrated in Fig. 3, with details in Appendix B.</p>
+<p>We introduce a visual CoT MLLM framework, <b>VisCoT</b>, which uses standard models without modifications, serving as a baseline for enhancing MLLMs with visual CoT capabilities.</p>
 
 <p>To train the MLLM, a CoT prompt is added: "Please provide the bounding box coordinate of the region that can help you answer the question better." VisCoT identifies the region and generates the bounding box. The ground truth bounding box is used to extract a localized image (X<sub>1</sub>) from the original (X<sub>0</sub>). Visual tokens {H<sub>0</sub>, H<sub>1</sub>} from both images are then integrated for more accurate answers.</p>
 
@@ -332,7 +332,7 @@
         <h2 class="title is-3"> Benchmark</h2>
     </div>
         <br>
-        <p>We provide an overview of our <b>visual CoT benchmark</b>, focusing on scenarios where the MLLM must concentrate on specific image regions. We use 12 source datasets (Fig. 1) and follow official training/evaluation splits when available, otherwise, we create random splits. The test sets of <b>SROIE</b>, <b>DUDE</b>, and <b>Visual7W</b> are used to evaluate zero-shot visual CoT capabilities. Following prior MLLM studies [28, 40], we use <b>ChatGPT</b> [45] to assign a numerical score between 0 and 1, where higher scores indicate better prediction accuracy.</p>
+        <p>We provide an overview of our <b>visual CoT benchmark</b>, focusing on scenarios where the MLLM must concentrate on specific image regions. We use 12 source datasets and follow official training/evaluation splits when available, otherwise, we create random splits. The test sets of <b>SROIE</b>, <b>DUDE</b>, and <b>Visual7W</b> are used to evaluate zero-shot visual CoT capabilities. Following prior MLLM studies [28, 40], we use <b>ChatGPT</b> [45] to assign a numerical score between 0 and 1, where higher scores indicate better prediction accuracy.</p>
     <div class="column is-six-fifths is-centered has-text-centered">
         <h2 class="title is-3"> Results</h2>
     </div>
