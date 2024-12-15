@@ -1,0 +1,613 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>VividFace</title>
+<link href="./style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
+<!-- p.serif{
+  font-family:"Times New Roman", Times, serif;
+} -->
+<style>
+  p.serif{
+    font-family: Helvetica, sans-serif;
+  }
+  p.sansserif{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+</style>
+
+<style>
+  .empty-line {
+    height: 20px;
+  }
+</style>
+  
+</head>
+
+<body>
+<div class="content">
+  <h1><strong>VividFace: A Diffusion-Based Hybrid Framework for High-Fidelity Video Face Swapping</strong></h1>
+  <h1><strong>Supplementary material</strong></h1>
+  <h2>Original videos shown in the mauiscript</h2>
+</div>
+
+
+<div class="content">
+  <p style="text-align:left; font-size: 1.5em; font-weight: bold" class="serif">Original videos shown in Figure 1</p>
+  
+  <div class="row-text">
+    <div>Source</div>
+    <div>Target</div>
+    <div style="color: red; font-weight: bold"> VividFace </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <img src="videos/paper/figure1/1.png" width="100%">
+    </div>
+    <div class="col">
+      <video class="clickplay" width="100%" autoplay muted loop>
+        <source src="videos/paper/figure1/1A.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col">
+      <video class="clickplay" width="100%" autoplay muted loop>
+        <source src="videos/paper/figure1/1B.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <img src="videos/paper/figure1/2.png" width="100%">
+    </div>
+    <div class="col">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure1/2A.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;"  autoplay muted loop>
+        <source src="videos/paper/figure1/2B.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <img src="videos/paper/figure1/3.png" width="100%">
+    </div>
+    <div class="col">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;"  autoplay muted loop>
+        <source src="videos/paper/figure1/3A.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure1/3B.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <img src="videos/paper/figure1/4.png" width="100%">
+    </div>
+    <div class="col">
+      <video class="clickplay" width="100%"  style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure1/4A.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure1/4B.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <p style="text-align:left; font-size: 1.5em; font-weight: bold" class="serif">Original videos shown in Figure 6</p>
+
+  <div class="row-text">
+    <div>Source</div>
+    <div>Target</div>
+    <div style="color: red; font-weight: bold"> VividFace </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <img src="videos/paper/figure6/source/1.png" width="100%">
+    </div>
+    <div class="col">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;"  autoplay muted loop>
+        <source src="videos/paper/figure6/target/output_2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure6/vividface/output_2_2.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="row-4text">
+    <div>DiffSwap</div>
+    <div>FSGAN</div>
+    <div>REFace</div>
+    <div>SimSwap</div>
+  </div>
+
+  <div class="row">
+    <div class="col-gallery">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure6/diffswap/2_to_output_2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure6/fsgan/2_to_output_2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure6/reface/2_to_output_2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure6/simswap/2_to_output_2.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+
+  <div class="empty-line"></div>
+  <hr style="border: 1px solid black;">
+
+
+  <div class="row-text">
+    <div>Source</div>
+    <div>Target</div>
+    <div style="color: red; font-weight: bold"> VividFace </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <img src="videos/paper/figure6/source/2.png" width="100%">
+    </div>
+    <div class="col">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;"  autoplay muted loop>
+        <source src="videos/paper/figure6/target/output_14.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure6/vividface/output_14_14.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="row-4text">
+    <div>DiffSwap</div>
+    <div>FSGAN</div>
+    <div>REFace</div>
+    <div>SimSwap</div>
+  </div>
+
+  <div class="row">
+    <div class="col-gallery">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure6/diffswap/14_to_output_14.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure6/fsgan/14_to_output_14.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure6/reface/14_to_output_14.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure6/simswap/14_to_output_14.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="empty-line"></div>
+  <hr style="border: 1px solid black;">
+
+
+  <div class="row-text">
+    <div>Source</div>
+    <div>Target</div>
+    <div style="color: red; font-weight: bold"> VividFace </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <img src="videos/paper/figure6/source/3.png" width="100%">
+    </div>
+    <div class="col">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;"  autoplay muted loop>
+        <source src="videos/paper/figure6/target/output_167.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure6/vividface/output_167_167.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="row-4text">
+    <div>DiffSwap</div>
+    <div>FSGAN</div>
+    <div>REFace</div>
+    <div>SimSwap</div>
+  </div>
+
+  <div class="row">
+    <div class="col-gallery">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure6/diffswap/167_to_output_167.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure6/fsgan/167_to_output_167.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure6/reface/167_to_output_167.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure6/simswap/167_to_output_167.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+
+  <div class="empty-line"></div>
+  <hr style="border: 1px solid black;">
+  <div class="empty-line"></div>
+
+
+  <div class="row-text">
+    <div>Source</div>
+    <div>Target</div>
+    <div style="color: red; font-weight: bold"> VividFace </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <img src="videos/paper/figure6/source/4.png" width="100%">
+    </div>
+    <div class="col">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;"  autoplay muted loop>
+        <source src="videos/paper/figure6/target/output_200.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure6/vividface/output_200_200.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="row-4text">
+    <div>DiffSwap</div>
+    <div>FSGAN</div>
+    <div>REFace</div>
+    <div>SimSwap</div>
+  </div>
+
+  <div class="row">
+    <div class="col-gallery">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure6/diffswap/200_to_output_200.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure6/fsgan/200_to_output_200.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure6/reface/200_to_output_200.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure6/simswap/200_to_output_200.mp4" type="video/mp4">
+    </div>
+  </div>
+</div>
+
+
+
+<div class="content">
+  <p style="text-align:left; font-size: 1.5em; font-weight: bold" class="serif">Original videos shown in Figure 7</p>
+  <div class="row-5text">
+    <div>Source</div>
+    <div>Target</div>
+  </div>
+
+  <div class="row">
+    <div class="col-small">
+      <img src="videos/paper/figure7/source.png" width="100%">
+    </div>
+    <div class="col-small">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure7/target.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="row-5text">
+    <div>Texture: 0.2, Attribute: 0.2</div>
+    <div>Texture: 0.2, Attribute: 0.4</div>
+    <div>Texture: 0.2, Attribute: 0.6</div>
+    <div>Texture: 0.2, Attribute: 0.8</div>
+    <div>Texture: 0.2, Attribute: 1.0</div>
+  </div>
+
+  <div class="row">
+    <div class="col-small">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure7/0.2_0.2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-small">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure7/0.2_0.4.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-small">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure7/0.2_0.6.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-small">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure7/0.2_0.8.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-small">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure7/0.2_1.0.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="row-5text">
+    <div>Texture: 0.4, Attribute: 0.2</div>
+    <div>Texture: 0.4, Attribute: 0.4</div>
+    <div>Texture: 0.4, Attribute: 0.6</div>
+    <div>Texture: 0.4, Attribute: 0.8</div>
+    <div>Texture: 0.4, Attribute: 1.0</div>
+  </div>
+
+  <div class="row">
+    <div class="col-small">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure7/0.4_0.2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-small">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure7/0.4_0.4.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-small">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure7/0.4_0.6.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-small">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure7/0.4_0.8.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-small">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure7/0.4_1.0.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="row-5text">
+    <div>Texture: 0.6, Attribute: 0.2</div>
+    <div>Texture: 0.6, Attribute: 0.4</div>
+    <div style="color: red; font-weight: bold"> Texture: 0.6, Attribute: 0.6 </div>
+    <div>Texture: 0.6, Attribute: 0.8</div>
+    <div>Texture: 0.6, Attribute: 1.0</div>
+  </div>
+
+  <div class="row">
+    <div class="col-small">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure7/0.6_0.2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-small">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure7/0.6_0.4.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-small">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure7/0.6_0.6.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-small">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure7/0.6_0.8.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-small">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure7/0.6_1.0.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="row-5text">
+    <div>Texture: 0.8, Attribute: 0.2</div>
+    <div>Texture: 0.8, Attribute: 0.4</div>
+    <div>Texture: 0.8, Attribute: 0.6</div>
+    <div>Texture: 0.8, Attribute: 0.8</div>
+    <div>Texture: 0.8, Attribute: 1.0</div>
+  </div>
+
+  <div class="row">
+    <div class="col-small">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure7/0.8_0.2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-small">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure7/0.8_0.4.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-small">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure7/0.8_0.6.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-small">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure7/0.8_0.8.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-small">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure7/0.8_1.0.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="row-5text">
+    <div>Texture: 1.0, Attribute: 0.2</div>
+    <div>Texture: 1.0, Attribute: 0.4</div>
+    <div>Texture: 1.0, Attribute: 0.6</div>
+    <div>Texture: 1.0, Attribute: 0.8</div>
+    <div>Texture: 1.0, Attribute: 1.0</div>
+  </div>
+
+  <div class="row">
+    <div class="col-small">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure7/1.0_0.2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-small">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure7/1.0_0.4.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-small">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure7/1.0_0.6.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-small">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure7/1.0_0.8.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-small">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure7/1.0_1.0.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <p style="text-align:left; font-size: 1.5em; font-weight: bold" class="serif">Original videos shown in Figure 8</p>
+  <div class="row-4text">
+    <div>Source</div>
+    <div>Target</div>
+    <div>Without Occlusion Augmentation</div>
+    <div style="color: red; font-weight: bold"> With Occlusion Augmentation  </div>
+  </div>
+
+  <div class="row">
+    <div class="col-gallery">
+      <img src="videos/paper/figure8/source.png" width="100%">
+    </div>
+    <div class="col-gallery">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure8/occlusion/target.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure8/occlusion/bad.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure8/occlusion/good.mp4" type="video/mp4">
+    </div>
+  </div>
+
+
+  <div class="empty-line"></div>
+  <hr style="border: 1px solid black;">
+
+  <div class="row-4text">
+    <div>Source</div>
+    <div>Target</div>
+    <div>Without 3D Reconstruction</div>
+    <div style="color: red; font-weight: bold"> With 3D Reconstruction  </div>
+  </div>
+
+  <div class="row">
+    <div class="col-gallery">
+      <img src="videos/paper/figure8/source.png" width="100%">
+    </div>
+    <div class="col-gallery">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure8/pose/target.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure8/pose/bad.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure8/pose/good.mp4" type="video/mp4">
+    </div>
+  </div>
+
+</div>
+
+</body>
+
+<script>
+  var videos = document.getElementsByClassName("clickplay");
+  for (var i = 0; i < videos.length; i++) {
+    videos[i].addEventListener("click", function() {
+      // Play the video
+      this.play();
+    });
+ 
+  }
+  </script>
+  
+
+</html>

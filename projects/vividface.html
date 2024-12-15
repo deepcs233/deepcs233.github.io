@@ -1,41 +1,479 @@
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>VividFace</title>
-<link href="./style.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="Visual CoT: Advancing Multi-Modal Language Models with a Comprehensive Dataset and Benchmark for Chain-of-Thought Reasoning"/>
+  <meta property="og:description" content="Visual CoT: Advancing Multi-Modal Language Models with a Comprehensive Dataset and Benchmark for Chain-of-Thought Reasoning"/>
+  <meta property="og:url" content="https://hao-shao.com/projects/viscot.html"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
 
-<!-- p.serif{
-  font-family:"Times New Roman", Times, serif;
-} -->
-<style>
-  p.serif{
-    font-family: Helvetica, sans-serif;
-  }
-  p.sansserif{
-    font-family: Arial, Helvetica, sans-serif;
-  }
-</style>
 
-<style>
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>VividFace</title>
+  <link rel="icon" type="image/x-icon" href="static/icons/swap.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+
+  <style>
+    .image-row {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
+    .image-row img {
+        width: 150px;
+        height: 150px;
+        cursor: pointer;
+    }
+    .video-container {
+        margin-top: 20px;
+        text-align: center;
+    }
+    video {
+            width: 60%;
+            height: 60%;
+            margin: 0 auto;
+    }
+    .row .col-gallery video {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+    }
+    .row .col video {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+    }
+    .image-row img.selected {
+        border: 4px solid red; /* 红色边框 */
+        box-sizing: border-box; /* 保持图片尺寸不变 */
+        }
+    .col-gallery {
+      float: left;
+      width: 25%;
+      box-sizing: border-box;
+      padding: 2px;
+    }
+    .row::after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+    .row-4text {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .row-4text > div {
+      display: grid;
+      place-items: center; 
+    }
+.col {
+  float: left;
+  width: 33.33%;
+  box-sizing: border-box;
+  padding: 2px;
+}
+.row-text {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.row-text > div {
+  display: grid;
+  place-items: center; 
+}
+
   .empty-line {
     height: 20px;
   }
 </style>
-  
+
 </head>
-
 <body>
-<div class="content">
-  <h1><strong>VividFace: A Diffusion-Based Hybrid Framework for High-Fidelity Video Face Swapping</strong></h1>
-  <h2>Video demo comparison</h2>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">VividFace: A Diffusion-Based Hybrid Framework for High-Fidelity Video Face Swapping</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="http://hao-shao.com/" target="_blank">Hao Shao</a>, </span>
+                <span class="author-block">
+                  <a href="" target="_blank">Shulun Wang</a>,</span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?user=cA9lRBcAAAAJ&hl=en" target="_blank">Yang Zhou</a>,</span>
+                <span class="author-block">
+                  <a href="https://songguanglu.github.io/" target="_blank">Guanglu Song</a>,</span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?user=f5MTTy4AAAAJ" target="_blank">Dailan He</a>,</span>
+                <br>
+                  <span class="author-block">
+                    <a href="" target="_blank">Shuo Qin</a>,</span>
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?user=vls0YhoAAAAJ" target="_blank">Zhuofan Zong</a>,</span>
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?user=rcWQWCoAAAAJ" target="_blank">Bingqi Ma</a>,</span>
+                  <span class="author-block">
+                    <a href="https://liuyu.us/" target="_blank">Yu Liu</a>,</span>
+                  <span class="author-block">
+                    <a href="http://www.ee.cuhk.edu.hk/~hsli/" target="_blank">Hongsheng Li</a>,</span>
+                  </span>
+                  </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><b style="color:#f68946; font-weight:normal">&#x25B6 </b> CUHK MMLab </b></span>
+              <span class="author-block"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> SenseTime Research</span>
+              <span class="author-block"><b style="color:#F2A900; font-weight:normal">&#x25B6 </b> CPII under InnoHK </span>
+            </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/2403.16999" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+</a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <!-- <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                </span> -->
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/deepcs233/VividFace" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2403.16999" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+                <span class="link-block">
+                  <a href="" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-share-square"></i>
+                    </span>
+                    <span>Model (coming)</span>
+                  </a>
+                </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+
+    <div style="text-align: center; margin-top: 0px; margin-bottom: 20px; font-size: 18px;">
+    <span style="color: red; font-weight: bold;">Please select and click on a face image to view the face swapping demo!</span>
+    </div>
+
+    <!-- 第一排图片 -->
+    <div class="image-row">
+        <img src="videos/paper/figure1/1.png" alt="Image 1" onclick="showVideo(this, 'video1')">
+        <img src="videos/paper/figure1/2.png" alt="Image 2" onclick="showVideo(this, 'video2')">
+        <img src="videos/paper/figure1/3.png" alt="Image 3" onclick="showVideo(this, 'video3')">
+        <img src="videos/paper/figure1/4.png" alt="Image 4" onclick="showVideo(this, 'video4')">
+    </div>
+
+
+    <div style="text-align: center; margin-top: 40px; margin-bottom: 20px; font-size: 18px;">
+    <span style="display: inline-block; width: 50px;"></span>
+    Target
+    <span style="display: inline-block; width: 500px;"></span>
+    <span style="color: red; font-weight: bold;">VividFace (Ours)</span>
+    </div>
+
+    <!-- 视频展示区域 -->
+    <div class="video-container" id="video-container">
+        <video id="video1" controls>
+            <source src="videos/paper/figure1/1.mp4" type="video/mp4">
+        </video>
+        <video id="video2" controls style="display:none;">
+            <source src="videos/paper/figure1/2.mp4" type="video/mp4">
+        </video>
+        <video id="video3" controls style="display:none;">
+            <source src="videos/paper/figure1/3.mp4" type="video/mp4">
+        </video>
+        <video id="video4" controls style="display:none;">
+            <source src="videos/paper/figure1/4.mp4" type="video/mp4">
+        </video>
+
+  </div>
+</section>
+
+<!-- Paper abstract -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Introduction</h2>
+        <div class="content has-text-justified">
+            <p>Video face swapping is becoming increasingly popular across various applications, yet existing methods primarily focus on static images and struggle with video face swapping because of temporal consistency and complex scenarios. In this paper, we present the first diffusion-based framework specifically designed for video face swapping. Our approach introduces a novel image-video hybrid training framework that leverages both abundant static image data and temporal video sequences, addressing the inherent limitations of video-only training. The framework incorporates a specially designed diffusion model coupled with a  <b>VidFaceVAE</b> that effectively processes both types of data to better maintain temporal coherence of the generated videos.</p>
+            
+            <p>To further disentangle identity and pose features, we construct the Attribute-Identity Disentanglement Triplet (AIDT) Dataset, where each triplet has three face images, with two images sharing the same pose and two sharing the same identity. Enhanced with a comprehensive occlusion augmentation, this dataset also improves robustness against occlusions. Additionally, we integrate 3D reconstruction techniques as input conditioning to our network for handling large pose variations.</p>
+
+            <p>Extensive experiments demonstrate that our framework achieves superior performance in identity preservation, temporal consistency, and visual quality compared to existing methods, while requiring fewer inference steps. Our approach effectively mitigates key challenges in video face swapping, including temporal flickering, identity preservation, and robustness to occlusions and pose variations.</p>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+
+<section class="section hero is-light">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-six-fifths">
+      <h2 class="title is-1"><img id="painting_icon" style="width:1.5em;vertical-align: middle" src="static/icons/viscot-pipeline.png"> VividFace Framewrok </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+<div class="container is-max-desktop">
+
+  <div class="columns is-centered">
+    <div class="column is-full-width">
+      <div class="content has-text-justified"> 
+
+          <p>Overview of the proposed framework. During training, our framework randomly chooses static images or video sequences as the training data. In addition to the noise z<sub>t</sub>, three other types of inputs are integrated to guide the generation process: (1) a face region mask, which controls the generation of facial imagery; (2) a 3D reconstructed face, which helps guide the pose and expression, especially in cases of large pose variations; and (3) masked source images, which supply background information. These inputs are processed through the Backbone Network, which performs the denoising operation. Within the Backbone Network, we employ cross-attention and temporal attention mechanisms. The temporal attention module ensures temporal continuity and consistency across frames. Our face encoder extracts identity and texture features from the target face, as well as pose and expression details from the source face, and uses these features in cross-attention to produce realistic and high-fidelity results. </p>
+
+
+      </div>
+      <centering>
+        <div style="text-align: center;">
+          <img id="teaser" width="80%" src="static/images/vividface-pipeline.png">     
+        </div>
+      </centering>           
+        </div>
+    </div>
+    <div class="column is-six-fifths is-centered has-text-centered">
+        <h2 class="title is-3"> VidFaceVAE</h2>
+    </div>
+        <br>
+        <p>Overview of the proposed <b>VidFaceVAE</b>, capable of simultaneous encoding and decoding of both image and video data. Certain modules are specifically designed for video inputs, and image inputs bypass these modules as needed.</p>
+    <div class="column is-six-fifths is-centered has-text-centered">
+        <div style="text-align: center;">
+          <img id="teaser" width="70%" src="static/images/vividface-3dvae.png">     
+        </div>
+  </div>
+</section>
+
+
+<section class="section hero is-light">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-six-fifths">
+      <h2 class="title is-1"><img id="painting_icon" style="width:1.5em;vertical-align: middle" src="static/icons/dataset.png"> AIDT dataset </h2>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
+
+    <div class="column is-six-fifths is-centered has-text-centered">
+        <div style="text-align: center;">
+          <img id="teaser" width="80%" src="static/images/vividface-dataset.png">     
+        </div>
+  </div>
+
+<p>
+    We construct triplet pairs for our AIDT (Attribute-Identity Disentanglement Triplet) dataset as shown in the figure. For video facial data, we present only the target and decoupling faces, as the source faces can be derived from any other frame within the same video clip.
+</p>
+<br>
+<p>
+    The AIDT dataset enables the face encoder to disentangle and fuse distinct facial components—ID features, texture features from the source face, and attribute features from the decoupling face. This enhances generalization, especially when the source and target faces belong to different individuals during inference.
+</p>
+
+
+
+        </div>
+        </div>
+  </div>
+</section>
+
+
+
+
+<section class="section hero is-light">
+<div style="width: 80%;margin-left:auto;margin-right:auto; text-align: center;">
+    <div class="column is-six-fifths">
+      <h2 class="title is-1">
+        <img id="painting_icon" style="width:1.5em;vertical-align: middle" src="static/icons/demo.png">
+        Demos
+      </h2>
+    </div>
 </div>
+</section>
 
 
 
-<div class="content">
+<section class="section">
+    <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
 
-  <p style="text-align:left; font-size: 1.5em; font-weight: bold" class="serif">Group 1</p>
+            <br>
+            <a href="./vividface-paper.html" style="font-size: 24px; font-weight: bold;">
+                <span style="color: red;">[more!]</span> Original videos shown in the manuscript
+            </a>
+            <br>
+            <br>
+            <a href="./vividface-other.html" style="font-size: 24px; font-weight: bold;">
+                <span style="color: red;">[more!]</span> Additional video demo comparison
+            </a>
+            <br>
+            <br>
+            <br>
+  <div class="empty-line"></div>
+  <hr style="border: 1px solid black;">
+
+            <br>
+  <p style="text-align:left; font-size: 1.5em; font-weight: bold" class="serif">Occlusion and large pose scenarios</p>
+  <p style="text-align:left; font-size: 1em; font-weight: bold" class="serif">Note: Other methods (such as FSGAN, DiffFace, DiffSwap, and Reface) tend to produce errors and cannot reliably generate videos.</p>
+            <br>
+
+  <div class="row-text">
+    <div></div>
+    <div>Source</div>
+    <div></div>
+  </div>
+      <img src="videos/paper/figure8/source.png" width="20%">
+
+  <div class="row-4text">
+    <div>Target</div>
+    <div>Without Occlusion Augmentation</div>
+    <div style="color: red; font-weight: bold"> With Occlusion Augmentation  </div>
+    <div>SimSwap</div>
+  </div>
+
+  <div class="row">
+    <div class="col-gallery">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure8/occlusion/target.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure8/occlusion/bad.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure8/occlusion/good.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure8/occlusion/simswap.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+
+
+  <div class="row-4text">
+    <div>Target</div>
+    <div>Without 3D Reconstruction</div>
+    <div style="color: red; font-weight: bold"> With 3D Reconstruction  </div>
+    <div>SimSwap</div>
+  </div>
+
+  <div class="row">
+    <div class="col-gallery">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure8/pose/target.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure8/pose/bad.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure8/pose/good.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-gallery">
+      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
+        <source src="videos/paper/figure8/pose/simswap.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+            
+  <div class="empty-line"></div>
+  <hr style="border: 1px solid black;">
+
+            <br>
+  <p style="text-align:left; font-size: 1.5em; font-weight: bold" class="serif"> Comparison with other methods</p>
+
+  
   <div class="row-text">
     <div>Source</div>
     <div>Target</div>
@@ -44,16 +482,16 @@
 
   <div class="row">
     <div class="col">
-      <img src="videos/others/source/Benedict_Cumberbatch.png" width="100%">
+      <img src="videos/paper/figure6/source/1.png" width="100%">
     </div>
     <div class="col">
       <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;"  autoplay muted loop>
-        <source src="videos/others/target/output_18.mp4" type="video/mp4">
+        <source src="videos/paper/figure6/target/output_2.mp4" type="video/mp4">
       </video>
     </div>
     <div class="col">
       <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
-        <source src="videos/others/vividface/output_18_Benedict_Cumberbatch.mp4" type="video/mp4">
+        <source src="videos/paper/figure6/vividface/output_2_2.mp4" type="video/mp4">
       </video>
     </div>
   </div>
@@ -68,31 +506,28 @@
   <div class="row">
     <div class="col-gallery">
       <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
-        <source src="videos/others/diffswap/Benedict_Cumberbatch_to_output_18.mp4" type="video/mp4">
+        <source src="videos/paper/figure6/diffswap/2_to_output_2.mp4" type="video/mp4">
       </video>
     </div>
     <div class="col-gallery">
       <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
-        <source src="videos/others/fsgan/Benedict_Cumberbatch_to_output_18.mp4" type="video/mp4">
+        <source src="videos/paper/figure6/fsgan/2_to_output_2.mp4" type="video/mp4">
       </video>
     </div>
     <div class="col-gallery">
       <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
-        <source src="videos/others/reface/Benedict_Cumberbatch_to_output_18.mp4" type="video/mp4">
+        <source src="videos/paper/figure6/reface/2_to_output_2.mp4" type="video/mp4">
       </video>
     </div>
     <div class="col-gallery">
       <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
-        <source src="videos/others/simswap/Benedict_Cumberbatch_to_output_18.mp4" type="video/mp4">
+        <source src="videos/paper/figure6/simswap/2_to_output_2.mp4" type="video/mp4">
       </video>
     </div>
   </div>
 
-
-  <div class="empty-line"></div>
-  <hr style="border: 1px solid black;">
-
-  <p style="text-align:left; font-size: 1.5em; font-weight: bold" class="serif">Group 2</p>
+  <br>
+  <br>
 
   <div class="row-text">
     <div>Source</div>
@@ -102,16 +537,16 @@
 
   <div class="row">
     <div class="col">
-      <img src="videos/others/source/Jensen_Huang.png" width="100%">
+      <img src="videos/paper/figure6/source/3.png" width="100%">
     </div>
     <div class="col">
       <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;"  autoplay muted loop>
-        <source src="videos/others/target/output_328.mp4" type="video/mp4">
+        <source src="videos/paper/figure6/target/output_167.mp4" type="video/mp4">
       </video>
     </div>
     <div class="col">
       <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
-        <source src="videos/others/vividface/output_328_Jensen_Huang.mp4" type="video/mp4">
+        <source src="videos/paper/figure6/vividface/output_167_167.mp4" type="video/mp4">
       </video>
     </div>
   </div>
@@ -126,262 +561,103 @@
   <div class="row">
     <div class="col-gallery">
       <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
-        <source src="videos/others/diffswap/Jensen_Huang_to_output_328.mp4" type="video/mp4">
+        <source src="videos/paper/figure6/diffswap/167_to_output_167.mp4" type="video/mp4">
       </video>
     </div>
     <div class="col-gallery">
       <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
-        <source src="videos/others/fsgan/Jensen_Huang_to_output_328.mp4" type="video/mp4">
+        <source src="videos/paper/figure6/fsgan/167_to_output_167.mp4" type="video/mp4">
       </video>
     </div>
     <div class="col-gallery">
       <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
-        <source src="videos/others/reface/Jensen_Huang_to_output_328.mp4" type="video/mp4">
+        <source src="videos/paper/figure6/reface/167_to_output_167.mp4" type="video/mp4">
       </video>
     </div>
     <div class="col-gallery">
       <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
-        <source src="videos/others/simswap/Jensen_Huang_to_output_328.mp4" type="video/mp4">
+        <source src="videos/paper/figure6/simswap/167_to_output_167.mp4" type="video/mp4">
       </video>
     </div>
   </div>
 
-
-  <div class="empty-line"></div>
-  <hr style="border: 1px solid black;">
-
-
-  <p style="text-align:left; font-size: 1.5em; font-weight: bold" class="serif">Group 3</p>
-  <div class="row-text">
-    <div>Source</div>
-    <div>Target</div>
-    <div style="color: red; font-weight: bold"> VividFace </div>
-  </div>
-
-  <div class="row">
-    <div class="col">
-      <img src="videos/others/source/Kamala_Harris.png" width="100%">
+        </div>
     </div>
-    <div class="col">
-      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;"  autoplay muted loop>
-        <source src="videos/others/target/output_253.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="col">
-      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
-        <source src="videos/others/vividface/output_253_Kamala_Harris.mp4" type="video/mp4">
-      </video>
-    </div>
-  </div>
+</section>
 
-  <div class="row-4text">
-    <div>DiffSwap</div>
-    <div>FSGAN</div>
-    <div>REFace</div>
-    <div>SimSwap</div>
-  </div>
 
-  <div class="row">
-    <div class="col-gallery">
-      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
-        <source src="videos/others/diffswap/Kamala_Harris_to_output_253.mp4" type="video/mp4">
-      </video>
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+      TBD
+      </code></pre>
     </div>
-    <div class="col-gallery">
-      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
-        <source src="videos/others/fsgan/Kamala_Harris_to_output_253.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="col-gallery">
-      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
-        <source src="videos/others/reface/Kamala_Harris_to_output_253.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="col-gallery">
-      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
-        <source src="videos/others/simswap/Kamala_Harris_to_output_253.mp4" type="video/mp4">
-      </video>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
     </div>
   </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
 
 
-  <div class="empty-line"></div>
-  <hr style="border: 1px solid black;">
+<script>
+    // 显示对应视频的函数
+    function showVideo(clickedImage, videoId) {
+            const images = document.querySelectorAll('.image-row img');
+            images.forEach(img => img.classList.remove('selected'));
 
-  <p style="text-align:left; font-size: 1.5em; font-weight: bold" class="serif">Group 4</p>
-  <div class="row-text">
-    <div>Source</div>
-    <div>Target</div>
-    <div style="color: red; font-weight: bold"> VividFace </div>
-  </div>
+            // 给被点击的图片添加红框
+            clickedImage.classList.add('selected');
 
-  <div class="row">
-    <div class="col">
-      <img src="videos/others/source/mila.png" width="100%">
-    </div>
-    <div class="col">
-      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;"  autoplay muted loop>
-        <source src="videos/others/target/output_342.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="col">
-      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
-        <source src="videos/others/vividface/output_342_mila.mp4" type="video/mp4">
-      </video>
-    </div>
-  </div>
-
-  <div class="row-4text">
-    <div>DiffSwap</div>
-    <div>FSGAN</div>
-    <div>REFace</div>
-    <div>SimSwap</div>
-  </div>
-
-  <div class="row">
-    <div class="col-gallery">
-      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
-        <source src="videos/others/diffswap/mila_to_output_342.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="col-gallery">
-      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
-        <source src="videos/others/fsgan/mila_to_output_342.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="col-gallery">
-      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
-        <source src="videos/others/reface/mila_to_output_342.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="col-gallery">
-      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
-        <source src="videos/others/simswap/mila_to_output_342.mp4" type="video/mp4">
-      </video>
-    </div>
-  </div>
+        // 隐藏所有视频
+        let videos = document.querySelectorAll('#video-container video');
 
 
-  <div class="empty-line"></div>
-  <hr style="border: 1px solid black;">
+        videos.forEach(function(video) {
+            console.log(video);
+            video.style.display = 'none';
+        });
 
-  <p style="text-align:left; font-size: 1.5em; font-weight: bold" class="serif">Group 5</p>
-  <div class="row-text">
-    <div>Source</div>
-    <div>Target</div>
-    <div style="color: red; font-weight: bold"> VividFace </div>
-  </div>
+        // 显示被点击的对应视频
+        let selectedVideo = document.getElementById(videoId);
+        selectedVideo.style.display = 'block';
+        selectedVideo.play()
+    }
 
-  <div class="row">
-    <div class="col">
-      <img src="videos/others/source/lecun.png" width="100%">
-    </div>
-    <div class="col">
-      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;"  autoplay muted loop>
-        <source src="videos/others/target/output_379.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="col">
-      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
-        <source src="videos/others/vividface/output_379_lecun.mp4" type="video/mp4">
-      </video>
-    </div>
-  </div>
+    // 默认展示第一个视频
+    document.addEventListener("DOMContentLoaded", function() {
+    const firstImage = document.querySelector('.image-row img'); // 获取第一张图片
+        showVideo(firstImage, 'video1'); // 触发展示第一个视频
+    });
+</script>
 
-  <div class="row-4text">
-    <div>DiffSwap</div>
-    <div>FSGAN</div>
-    <div>REFace</div>
-    <div>SimSwap</div>
-  </div>
-
-  <div class="row">
-    <div class="col-gallery">
-      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
-        <source src="videos/others/diffswap/lecun_to_output_379.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="col-gallery">
-      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
-        <source src="videos/others/fsgan/lecun_to_output_379.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="col-gallery">
-      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
-        <source src="videos/others/reface/lecun_to_output_379.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="col-gallery">
-      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
-        <source src="videos/others/simswap/lecun_to_output_379.mp4" type="video/mp4">
-      </video>
-    </div>
-  </div>
-
-
-  <div class="empty-line"></div>
-  <hr style="border: 1px solid black;">
-
-  <p style="text-align:left; font-size: 1.5em; font-weight: bold" class="serif">Group 6</p>
-  <div class="row-text">
-    <div>Source</div>
-    <div>Target</div>
-    <div style="color: red; font-weight: bold"> VividFace </div>
-  </div>
-
-  <div class="row">
-    <div class="col">
-      <img src="videos/others/source/Donald_Trump.png" width="100%">
-    </div>
-    <div class="col">
-      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;"  autoplay muted loop>
-        <source src="videos/others/target/output_400.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="col">
-      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
-        <source src="videos/others/vividface/output_400_Donald_Trump.mp4" type="video/mp4">
-      </video>
-    </div>
-  </div>
-
-  <div class="row-4text">
-    <div>DiffSwap</div>
-    <div>FSGAN</div>
-    <div>REFace</div>
-    <div>SimSwap</div>
-  </div>
-
-  <div class="row">
-    <div class="col-gallery">
-      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
-        <source src="videos/others/diffswap/Donald_Trump_to_output_400.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="col-gallery">
-      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
-        <source src="videos/others/fsgan/Donald_Trump_to_output_400.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="col-gallery">
-      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
-        <source src="videos/others/reface/Donald_Trump_to_output_400.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="col-gallery">
-      <video class="clickplay" width="100%" style="aspect-ratio: 1 / 1; object-fit: cover;" autoplay muted loop>
-        <source src="videos/others/simswap/Donald_Trump_to_output_400.mp4" type="video/mp4">
-      </video>
-    </div>
-  </div>
-
-
-  <div class="empty-line"></div>
-  <hr style="border: 1px solid black;">
-
-</div>
 
 </body>
+
+
 
 <script>
   var videos = document.getElementsByClassName("clickplay");
@@ -393,6 +669,5 @@
  
   }
   </script>
-  
+  </html>
 
-</html>
